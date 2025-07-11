@@ -1,0 +1,32 @@
+td,th{
+    border: 3px solid black;
+    padding: 3px;
+}
+table{
+    margin-left: 60px;
+}
+td{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+#Lionsred{
+    border: 3px solid red;
+    color: red;
+    margin-left: 60px;
+    margin-right: 220px;
+    text-align: center;
+}
+#mediatitle{
+    text-align: center;
+}
+img{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+ol{
+    list-style-type: upper-roman;
+}
+span{
+    background-color: yellow;
+}
