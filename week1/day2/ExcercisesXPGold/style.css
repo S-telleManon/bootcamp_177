@@ -1,0 +1,54 @@
+tr,td,th{
+    text-align: center;
+    padding-right: 10%;
+    padding-top: 1%;
+}
+div{
+    padding: 25%;
+    background-image: url(pexels-ollivves-1078981.jpg) ;
+    background-size: auto;
+
+}
+table{
+    padding-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen {
+    max-width: 1600px;
+}
+h1{
+    text-align: center;
+    color:  rgb(233, 233, 233);
+}
+body{
+    background-color: rgb(233, 233, 233)
+}
+form{
+    text-align: center;
+}
+input[type=submit] {
+    background-color: #74C0FC;
+    border: none;
+    border-radius: 5%;
+    height: 25px;
+    width: 75px;
+    color:  rgb(233, 233, 233)
+}
+input[type=email] {
+    border: none;
+    border-radius: 3.5%;
+    height: 25px;
+    width: 300px;
+}
+h2{
+    margin-left: 80px;
+    position: relative;
+}
+#signin {
+position: absolute;
+right: 100px;
+top: 25px;
+
+}
