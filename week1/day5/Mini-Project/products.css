@@ -1,0 +1,87 @@
+img{
+    width: 250px;
+    height: 350px;
+    padding: 1%;
+    border: 3PX SOLID #000000;
+    border-radius: 5%;
+    margin-bottom: 10px;
+}
+.products{
+    /* max-width: 60px; */
+    border: 0;
+    position: relative;
+    float: left;
+    /* width: 100%; */
+    padding-left: 5%;
+}
+.new{
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    background-color: green;
+    border-radius: 50%;
+    color: white;
+    width: 3vw;
+    height: 3vw;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.discount{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    width: 3vw;
+    height: 3vw;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.type,form{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+ul.crownicon{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+}
+
+ul.crownicon li {
+    float: left;
+    padding-left: 25px;
+}
+ul.crownicon li a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+ul.crownicon li.right{float: right;}
+/* .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #000000;
+   color: white;
+   text-align: center;
+} */
+nav{
+    margin-bottom: 50px;
+}
+body{
+    background-color: rgb(237, 237, 237);
+}
