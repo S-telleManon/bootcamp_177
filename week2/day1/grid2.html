@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gridcontainer{
+            display: grid;
+            grid-template-rows: repeat(5,1fr)
+            grid-template-columns: repeat(3,1fr);
+            gap: 3px; 
+            }
+        .gridcontainer > div{
+            background-color: aquamarine;
+            margin: 1px;
+            color: white;
+            text-align: center;
+
+        }
+        #box1 {
+            grid-column: 1/span 3;
+            background-color: violet;
+        }
+        #box2 {
+            grid-row: 2/span 2;
+            background-color: rgb(18, 18, 150);
+            
+        }
+        #box3{
+            grid-row: 2;
+            grid-column: 2;
+            background-color: azure;
+        }
+         #box4{
+            grid-row: 2;
+            grid-column: 3;
+            background-color: rgb(14, 190, 190);
+        }
+         #box5{
+            grid-column: 2 / span 2;
+            background-color: rgb(128, 74, 172);
+        }
+         #box6{
+            grid-column: 1 /span 2;
+            background-color: rgb(221, 91, 16);
+        }
+        #box7{
+            grid-column: 3;
+            background-color: chartreuse;
+        }
+        #box8{
+            grid-column: 1 /span 3;
+            background-color: rgb(146, 6, 6);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="gridcontainer">
+        <div id="box1" >1</div>
+        <div id="box2" >2</div>
+        <div id="box3" >3</div>
+        <div id="box4" >4</div>
+        <div id="box5" >5</div>
+        <div id="box6" >6</div>
+        <div id="box7" >7</div>
+        <div id="box8" >8</div>
+    </div>
+</body>
+</html>
