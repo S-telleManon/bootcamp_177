@@ -1,14 +1,15 @@
 body > div
 {
- width:400px;
- height:400px;
- /* background:#8b68f7; */
- transition:all 0.3s ease;
- margin: 5px 5px 5px 5px;
+ width:20vw;
+ height:34vh;
+ margin: 2vh 2vw;
  color: white;
  font-size: 50px;
  display: flex;
  float: left;
+ align-items: center;
+ justify-content: center;
+ border-radius: 15%;
 }
 div {
   transition: all 0.3s ease;
@@ -27,15 +28,7 @@ div {
 .color:hover{
  background:#53a7ea;
 }
-.grow{
-    background: pink;
-}
-.grow:hover
-{
- -webkit-transform: scale(1.5);
- -ms-transform: scale(1.5);
- transform: scale(1.5);
-}
+
 .shrink{
     background:aqua ;
 }
@@ -146,11 +139,25 @@ div {
         transform: translateX(0);
     }
 }
-
+.swing{
+    background: greenyellow;
+}
 .swing:hover
 {
     -webkit-animation: swing 1s ease;
     animation: swing 1s ease;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+}
+.grow{
+    background: palevioletred;
+    width: 1400px;
+    border-radius: 3%;
+
+}
+.grow:hover
+{
+ -webkit-transform: scale(5);
+ -ms-transform: scale(5);
+ transform: scale(5);
 }
