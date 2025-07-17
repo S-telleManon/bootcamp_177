@@ -17,12 +17,12 @@ img{
 .new{
     position: absolute;
     top: 10px;
-    left: 80px;
+    left: 98px;
     background-color: green;
     border-radius: 50%;
     color: white;
-    width: 3vw;
-    height: 3vw;
+    width: 2.5vw;
+    height: 2.5vw;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -35,12 +35,13 @@ img{
     background-color: red;
     border-radius: 50%;
     color: white;
-    width: 3vw;
-    height: 3vw;
+    width: 2.5vw;
+    height: 2.5vw;
     text-align: center;
     display: flex; 
     justify-content: center;
     align-items: center;
+    transition: .3s ease
 }
 .type,form{
     display: block;
@@ -84,4 +85,30 @@ nav{
 }
 body{
     background-color: rgb(237, 237, 237);
+}
+.old-price{
+    text-decoration: line-through;
+    color: grey;
+    font-size: smaller
+}
+.design{
+    display: inline-block;
+    padding: 2%;
+    text-align: center;
+    margin-left:60px ;
+}
+.productname{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+.current-price{
+    color: green;
+    font-size: larger;
+}
+img:hover
+{
+ -webkit-transform: scale(1.05);
+ -ms-transform: scale(1.05);
+ transform: scale(1.05);
 }
