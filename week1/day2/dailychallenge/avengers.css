@@ -1,0 +1,54 @@
+ul.thor{
+    list-style-type: none;
+    margin: 0;
+    padding: 25px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+ul.thor li {
+    float: left;
+}
+ul.thor li a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+ul.thor li.right{float: right;}
+img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+h1{
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    font-size: 80px;
+    font-family: sans-serif;
+}
+p{
+    position: absolute;
+    left: 100px;
+    top: 550px;
+    width: 1000px;
+    font-family: sans-serif;
+}
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: hsl(0, 0%, 20%);
+   color: white;
+   text-align: center;
+   font-family: sans-serif;
+   padding: 15px;
+   margin: -5px;
+}
