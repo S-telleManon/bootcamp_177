@@ -1,0 +1,15 @@
+.header_logocontainer{
+    margin-left: 30px;
+    display: flex;
+    float: left;
+}
+.headerinfo{
+    padding-left: 5px;
+}
+.circleicon{
+    border-radius: 50%;
+}
+nav{
+    background-color: white;
+    color: black;
+}
