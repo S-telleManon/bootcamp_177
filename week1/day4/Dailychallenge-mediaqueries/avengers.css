@@ -1,11 +1,18 @@
+body{
+    background: url(thor.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    margin: 0px;
+    background-size: cover;
+}
 ul.thor{
     list-style-type: none;
     margin: 0;
     padding: 25px;
     overflow: hidden;
     background-color: hsl(0, 0%, 20%);
-    color: white;
-    position: relative;
+    padding-bottom: 10px;
 }
 
 ul.thor li {
@@ -22,7 +29,6 @@ ul.thor li a{
     font-size: large;
 }
 ul.thor li.right{float: right;}
-
 h1{
     position: absolute;
     float: left;
@@ -39,42 +45,43 @@ p{
     font-family: sans-serif;
     padding-left: 30px;
 }
-/* .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: hsl(0, 0%, 20%);
-   color: white;
-   text-align: center;
-   font-family: sans-serif;
-   padding: 15px;
-   margin: -10px;
-} */
-.image{
-    padding: 25%;
-    background-image: url(thor.jpg) ;
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
 
+@media all and (min-width:0px) and (max-width:768px){
+    h1{
+        font-size: 25px;
+    }
+    ul.thor{
+        background-color:yellow;
+        color: black;
+        margin: 0%;
+    }
+    body{
+    background: url(thor.jpg);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: 0px;
+    background-size: cover;
 }
+}
+/* }
 @media screen and (min-width:768px) and (max-width:992px){
     h1{
         font-size: 25px;
     }
     ul.thor{
-        background-color: yellow;
+        background-color:lightgreen;
         color: black;
+        margin: 0%;
     }
+    body{
+    background: url(thor.jpg);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: 0px;
+    background-size: cover;
 }
-@media all and (min-width:600px) and (max-width:768px){
-    h1{
-        font-size: 35px;
-    }
-    ul.thor{
-        background-color: lightgreen;
-        color: black;
-    }
 }
 @media all and (min-width:992px) and (max-width:1200px){
     ul.thor{
@@ -92,7 +99,6 @@ p{
     position: absolute;
     float: left;
     top: 350px;
-    width: 500px;
     font-family: sans-serif;
     }
     
@@ -105,4 +111,4 @@ p{
         background-color: black;
         color: white;
     }
-}
+} */
