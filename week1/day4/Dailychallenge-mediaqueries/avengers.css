@@ -1,7 +1,7 @@
 body{
     background: url(thor.jpg);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-repeat: no-repeat;
     margin: 0px;
     background-size: cover;
@@ -21,7 +21,7 @@ ul.thor li {
 ul.thor li a{
     display: block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
     color: white;
     font-family: sans-serif;
@@ -29,31 +29,40 @@ ul.thor li a{
     font-size: large;
 }
 ul.thor li.right{float: right;}
-h1{
+.textthor{
+    padding-left: 50px;
+}
+.thortitle{
     position: absolute;
     float: left;
     top: 400px;
-    font-size: 80px;
+    font-size: 50px;
     font-family: sans-serif;
-    padding-left: 30px;
 }
-p{
+.thorpara{
     position: absolute;
     float: left;
-    top: 500px;
+    top: 575px;
     width: 1000px;
     font-family: sans-serif;
-    padding-left: 30px;
 }
 
-@media all and (min-width:0px) and (max-width:768px){
+@media screen and (max-width:768px){
     h1{
-        font-size: 25px;
+        font-size: 35px;
     }
     ul.thor{
-        background-color:yellow;
-        color: black;
-        margin: 0%;
+    list-style-type: none;
+    margin: 0;
+    padding: 40px;
+    overflow: hidden;
+    background-color: yellow;
+    padding-bottom: 10px;
+    }
+    nav .banner{
+        margin: 0;
+        padding: 0;
+        width:1000px;
     }
     body{
     background: url(thor.jpg);
