@@ -4,12 +4,136 @@
     float: left;
 }
 .headerinfo{
-    padding-left: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
 }
 .circleicon{
     border-radius: 50%;
 }
+.nav-link,.headerinfo{
+    background: -webkit-linear-gradient(#82b8e7 55%, #d47fee 45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 nav{
-    background-color: white;
-    color: black;
+    background: #100545;
+    color: white;
+    position: fixed;
+}
+.homecontainer{
+    text-align: center;
+    padding: 10%;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    color: #100e49;
+    width: 100%;
+}
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  opacity: 0.5;
+}
+h1{
+    font-size: 50px;
+}
+.briefpresentation{
+    font-size: 20px;
+}
+.brieftag{
+    font-size: 15px;
+}
+.brieftag2{
+    font-size: 15px;
+    color: rgb(18, 17, 75);
+}
+.btn{
+    background-color: #100545;
+    color: #82b8e7;
+}
+#About{
+    background-color: rgba(130, 122, 199, 0.1);
+    margin-top: 0;
+    margin-top: -5px;
+    border-top: 2px outset rgb(18, 17, 75);
+}
+.bigtitle{
+    font-size: 30px;
+    color: rgb(18, 17, 75);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+.subtitles{
+    font-size: 15px;
+    color: rgb(51, 50, 153);
+    text-align: center;
+    padding-bottom: 50px;
+    font-style: italic;
+}
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 100%;
+    margin-left: 200px;
+    padding-bottom: 100px;
+}
+.infoknowme{
+    font-size: 20px;
+    color: rgb(18, 17, 75);
+    font-weight: bold;
+}
+#projects{
+    background-color: rgba(156, 146, 240, 0.1);
+    margin-top: 0;
+}
+.gridcontainer2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 200px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+}
+.imgproject{
+  mix-blend-mode: multiply; /* Blends white areas to transparency */
+  filter: contrast(100%); /* Helps refine the edges */
+}
+.images{
+    position: relative;
+}
+.imgproject2{
+  position: absolute;
+  left: 120px;
+  top: 51px;
+}
+form{
+    margin: 50px;
+    padding: 5px;
+}
+.btn1{
+    background-color: #100545;
+    color: #82b8e7;
+    font-size: large;
+    width: 100px;
+    border-radius: 7%;
+}
+.buttonproject2{
+    text-align: center;
+}
+#contact{
+    background-color: rgba(208, 203, 255, 0.1);
+    margin-top: 0;
+}
+.textdesc{
+    padding-right: 60px;
+    color: #100545;
+}
+.btnboth{
+    display: inline-block;
+    vertical-align:middle;
+    margin: 0px;
 }

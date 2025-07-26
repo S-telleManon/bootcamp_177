@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+<nav class="navbar navbar-expand-lg navbar-light py-3">
   <div class="container-fluid">
     <!-- <a class="navbar-brand" href="#">Estelle Manon</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span> -->
       <div class="header_logocontainer">
         <div class="headerimg">
-            <img src="taurus.png" class="circleicon" width="25px" height="25px" alt="">
+            <img src="cyberpunk.jpg" class="circleicon" width="40px" height="40px" alt="">
         </div>
         <span class="headerinfo">Estelle Manon</span>
       </div>
@@ -28,54 +28,87 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#About">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Project</a>
+          <a class="nav-link" href="#projects">Project</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<section class="Home">
+<section id="Home">
+  <div class="video1">
+  <video autoplay muted loop id="myVideo">
+    <source src="MicrosoftTeams-video.mp4" type="video/mp4">
+  </video>
+  </div>
   <div class="homecontainer">
     <h1>HEY,I'M ESTELLE MANON</h1>
     <div class="briefpresentation">A passionate developer dedicated to crafting solutions that don't just meet requirements—but reflect the heart of your vision.</div>
-    <div class="brieftag">Coding with care, delivering with soul</div>
-    <div class="brieftag2">Want to know more about my projects.</div>
-    <div class="buttonproject"><button type="button" class="btn btn-dark">Hit me!</button></div>
+    <div class="brieftag"><i>Coding with <b>care</b>, delivering with <b>soul</b></i></div><br>
+    <div class="brieftag2">Want to know more about my projects!!</div><br>
+    <div class="buttonproject"><a href="file:///c%3A/Users/emanon/Desktop/bootcamp_177/week2/day5/PortfolioProject/portfolio.html#projects"><button type="button" class="btn">Hit me!</button></a></div>
   </div>
 </section>
-<section class="About">
+<section id="About">
   <div class="aboutcontainer">
     <div class="bigtitle">ABOUT ME</div>
     <div class="subtitles">In this section you can find more information about me, what i have done, what i do and my current skills.</div>
     <div class="gridcontainer">
       <div>
-        <span class="infoknowme">Get to know me further!!!</span>
+        <span class="infoknowme">Get to know me further!!!</span><br><br>
+        <div class="textdesc">I have completed multiple comprehensive courses including full stack development.<br> Holder of a BSC in Mathematics, adds up to demonstrate a strong foundation in logical reasoning, anlytical thinking and problem-solving complemented by practical skills in front-end and back-end technologies </div><br>
+        <div class="textdesc">Feel free to <b>Connect</b> or <b>Follow</b> me on my Linkedin and Instagram where I post useful content related to Web Development and Programming</div><br>
+        <div class="textdesc">I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</div><br>
+        <div class="btnboth">
+          <div class="buttonproject1"><button type="button" class="btn btn-secondary">Contact Me</button></div><br>
+          <div><a href="file:///C:/Users/emanon/Desktop/bootcamp_177/week2/day5/PortfolioProject/Resume.pdf" target="_blank"><button type="button" class="btn btn-secondary">View my Resume</button></a></div>
+        </div>
       </div>
       <div>
-        <span class="infoknowme">My Skils </span>
-      </div> 
-      <div>
-       <div>Im a frontend</div>
-      </div>
-      <div>
-        <div>button</div>
-      </div>            
+        <span class="infoknowme">My Skills </span>
+      </div>             
     </div>
   </div>
 </section>
-<section class="projects">
+<section id="projects">
       <div class="bigtitle" >PROJECTS</div>
       <div class="subtitles">Take a look at some of the projects I've brought to life for both myself and my clients. Each comes with its own case study, so you can see the thinking and creativity behind the code.</div>
     <div class="gridcontainer2">
-      <div class="imgproject"></div>
+      <div class="images">
+      <div class="imgproject"><img src="laptopimage.jpg" alt="" ></div>
+      <div class="imgproject2"><img src="item1.png" alt="" width="370px" height="218px"></div>
+      </div>
       <div class="textprojects">
-        <div class="infoknowme">Landing page with revies</div>
+        <div class="infoknowme">Landing page with reviews</div>
+        <div class="description">The landing page contain the brief figures of the company. Css has been used to develop the different figureson the pages </div>
+        <div class="badges">
+          <div class="buttonproject1"><button type="button" class="btn btn-secondary">CSS</button></div>
+          <div class="buttonproject1"><button type="button" class="btn btn-secondary">HTML</button></div>
+        </div>
+      </div>
+            <div class="images">
+      <div class="imgproject"><img src="laptopimage.jpg" alt="" ></div>
+      <div class="imgproject2"><img src="item2.png" alt="" width="370px" height="218px"></div>
+      </div>
+      <div class="textprojects">
+        <div class="infoknowme">Landing page with reviews</div>
+        <div class="description">The landing page contain the brief figures of the company. Css has been used to develop the different figureson the pages </div>
+        <div class="badges">
+          <div class="buttonproject1"><button type="button" class="btn btn-secondary">CSS</button></div>
+          <div class="buttonproject1"><button type="button" class="btn btn-secondary">HTML</button></div>
+        </div>
+      </div>
+            <div class="images">
+      <div class="imgproject"><img src="laptopimage.jpg" alt="" ></div>
+      <div class="imgproject2"><img src="item3.png" alt="" width="370px" height="218px"></div>
+      </div>
+      <div class="textprojects">
+        <div class="infoknowme">Landing page with reviews</div>
         <div class="description">The landing page contain the brief figures of the company. Css has been used to develop the different figureson the pages </div>
         <div class="badges">
           <div class="buttonproject1"><button type="button" class="btn btn-secondary">CSS</button></div>
@@ -83,6 +116,23 @@
         </div>
       </div>
     </div>
+</section>
+<section id="contact">
+    <div class="bigtitle" >CONTACT</div>
+    <div class="subtitles">Take a look at some of the projects I've brought to life for both myself and my clients. Each comes with its own case study, so you can see the thinking and creativity behind the code.</div>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter your Name"><br>
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your Email"><br>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your Message"></textarea>
+  </div><br>
+    <div class="buttonproject2"><button type="button" class="btn1">SUBMIT</button></div>
+</form>
 </section>
 </body>
 </html>
