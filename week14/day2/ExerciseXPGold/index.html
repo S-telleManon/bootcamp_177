@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // -------------Exercise1--------------------
+        let sentence = ["my","favorite","color","is","blue"];
+        console.log(sentence[0]+" "+sentence[1]+" "+sentence[2]+" "+sentence[3]+" "+sentence[4])
+        // -------------Exercise2--------------------
+        let str1 = "mix";
+        let str2 = "pod";
+        let newStr1 = str2.slice(0,2)+str1.slice(2)
+        let newStr2 =str1.slice(0,2)+ str2.slice(2)
+        let newWord = newStr1+" "+newStr2
+        console.log(newWord)
+        // -------------Exercise3--------------------
+        let userNumber1=prompt('Please enter a number')
+        let num1 = userNumber1
+        console.log(typeof(num1))
+        let userNumber2=prompt('Please enter a second number')
+        let num2 = userNumber2
+        // alert(parseInt(num1)+parseInt(num2))
+        // ------------Bonus--------------------
+        function calculator(num1, num2, operation) {
+        switch (operation) {
+        case "addition":
+            return num1+num2
+        case "subtract":
+            return num1 - num2;
+        case "multiply":
+            return num1 * num2;
+        case "divide":
+            if (num2 !== 0) {
+                return num1 / num2;
+            } else {
+                return "Error: Division by zero!";
+            }
+        default:
+            return "Invalid operation";
+    }
+}
+    alert('The Addition of '+ num1 +" and "+ num2+" = "+calculator(parseInt(num1),parseInt(num2),"addition"))
+    alert('The Subtraction of '+ num1 +" by "+ num2+" = "+calculator(parseInt(num1),parseInt(num2),"subtract"))
+    alert('The Multiplication of '+ num1 +" by "+ num2+" = "+calculator(parseInt(num1),parseInt(num2),"multiply"))
+    alert('The Division of '+ num1 +" by "+ num2+" = "+calculator(parseInt(num1),parseInt(num2),"divide"))
+
+    </script>
+</head>
+<body>
+    <h1>Exercise XpGold</h1>
+</body>
+</html>
