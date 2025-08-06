@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      // ---------------Exercise 1-------------
+      let favFood = "Lasagna";
+      let favMeal= "dinner";
+      console.log("I eat " + favFood + " every " + favMeal);
+    // ---------------Exercise 2 part 1-------------
+    let myWatchedSeries = ["black mirror", "money heist", "the big bang theory"]
+    let myWatchedSeriesLength = myWatchedSeries.length;
+    let myWatchedSeriesSentence = myWatchedSeries[0] +", "+ myWatchedSeries[1] + ", and "+ myWatchedSeries[2];
+    console.log("I watched " + myWatchedSeriesLength + " series :"+ myWatchedSeriesSentence)
+   // ---------------Exercise 2 part 2-------------
+    myWatchedSeries[2] = "friends"
+    console.log(myWatchedSeries)
+    myWatchedSeries.push('good doctor')
+    let addToMyWatchedSeries = myWatchedSeries.splice(0,0,"dr house");
+    console.log(myWatchedSeries)
+    myWatchedSeries.splice(1,1)
+    console.log(myWatchedSeries)
+    let index = myWatchedSeries.indexOf("money heist")
+    let thirdLetter = myWatchedSeries[index][2]
+    console.log(thirdLetter)
+    console.log(myWatchedSeries)
+  // ---------------Exercise 3------------
+    let celsiusTemp = 25;
+    let fahrenheitTemp = ((celsiusTemp/5)*9)+32;
+    console.log( celsiusTemp +"°C is "+fahrenheitTemp+"°F")
+      // ---------------Exercise 4------------
+    let c;
+    let a = 34;
+    let b = 21;
+
+    console.log(a+b) //first expression
+    // Prediction: 55
+    // Actual:55
+
+    a = 2;
+
+    console.log(a+b) //second expression
+    // Prediction:23
+    // Actual:23
+     //c has no attributed value 
+     //Analyse the code below, what will be the outcome?
+     console.log(3+4+'5')
+     //output = 75 since 3 & 4 are numbers they add up and 5 is a string 
+
+      // ---------------Exercise 5------------
+      console.log(typeof(15))
+      // Prediction:number
+      // Actual: number
+
+      console.log(typeof(5.5))
+      // Prediction: float
+      // Actual: number
+
+      console.log(typeof(NaN))
+      // Prediction: NaN
+      // Actual: number
+
+      console.log(typeof("hello"))
+      // Prediction:s string
+      // Actual: string
+
+      console.log(typeof(true))
+      // Prediction:boleean
+      // Actual: boolean
+
+      console.log(typeof(1 != 2))
+      // Prediction:number
+      // Actual: boolean
+
+      console.log("hamburger" + "s")
+      // Prediction: hamburgers
+      // Actual:
+
+      console.log("hamburgers" - "s")
+      // Prediction: hamburger
+      // Actual:NaN
+
+      console.log("1" + "3")
+      // Prediction:13
+      // Actual:13
+
+      console.log("1" - "3")
+      // Prediction: 
+      // Actual: -2
+
+      console.log("johnny" + 5)
+      // Prediction:johnny5
+      // Actual:johnny5
+
+      console.log("johnny" - 5)
+      // Prediction: NaN
+      // Actual: NaN
+
+      console.log(99 * "hello")
+      // Prediction: NaN
+      // Actual:Nan
+
+      console.log(1 != 1)
+      // Prediction: 
+      // Actual: false
+
+      console.log(1 == "1")
+      // Prediction:
+      // Actual: true
+
+      console.log(1 === "1")
+      // Prediction:
+      // Actual: false 
+// ---------------Exercise 6------------
+  console.log(5 + "34")
+// Prediction: 534
+// Actual:
+
+console.log(5 - "4")
+// Prediction:1
+// Actual:1
+
+console.log(10 % 5)
+// Prediction:NaN
+// Actual:0
+
+console.log(5 % 10)
+// Prediction: 0.5
+// Actual:5
+
+console.log(" " + " ")
+// Prediction:  
+// Actual:  
+
+console.log(" " + 0)
+// Prediction: 0
+// Actual: 0
+
+console.log(true + true)
+// Prediction: true
+// Actual: 2
+
+console.log(true + false)
+// Prediction: 1 +0
+// Actual:1
+
+console.log(false + true)
+// Prediction:0+1
+// Actual:1
+
+console.log(false - true)
+// Prediction:0-1
+// Actual:-1
+
+console.log(!true)
+// Prediction:
+// Actual:false
+
+console.log(3 - 4)
+// Prediction:-1
+// Actual:-1
+    </script>
+</head>
+<body>
+    <h1>Exercise XP</h1>
+</body>
+</html>

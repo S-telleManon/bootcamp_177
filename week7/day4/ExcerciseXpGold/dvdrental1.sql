@@ -1,0 +1,55 @@
+-- SCHEMA: public
+
+-- DROP SCHEMA IF EXISTS public ;
+
+CREATE SCHEMA IF NOT EXISTS public
+    AUTHORIZATION pg_database_owner;
+
+COMMENT ON SCHEMA public
+    IS 'standard public schema';
+
+GRANT USAGE ON SCHEMA public TO PUBLIC;
+
+GRANT ALL ON SCHEMA public TO pg_database_owner;
+
+SELECT * FROM customer;
+SELECT first_name || ' ' || last_name AS full_name FROM customer;
+SELECT DISTINCT create_date FROM customer;
+SELECT create_date FROM customer;
+SELECT * FROM customer ORDER BY first_name DESC;
+SELECT film_id,title,description,release_year,rental_rate FROM film ORDER BY rental_rate ASC;
+SELECT address,phone FROM address WHERE district = 'Texas';
+SELECT * FROM film where film_id = 15 or film_id = 150;
+SELECT film_id,title,description,length,rental_rate FROM film WHERE title ='Titanic';
+SELECT film_id,title,description,length,rental_rate FROM film WHERE title LIKE 'Ti%';
+SELECT * FROM film ORDER by rental_rate ASC LIMIT 10;
+SELECT * FROM film ORDER by rental_rate ASC OFFSET 10 ROWS FETCH FIRST 10 ROWS ONLY;
+SELECT customer.first_name,customer.last_name,payment.amount,payment.payment_date FROM customer INNER JOIN payment ON customer.customer_id =payment.customer_id ORDER BY customer.customer_id ASC;
+SELECT film.film_id,film.title FROM film LEFT JOIN inventory on film.film_id = inventory.film_id WHERE inventory.film_id IS NULL;
+SELECT city.city,country.country FROM city JOIN country ON city.country_id=country.country_id;
+SELECT 
+    customer.customer_id,
+    customer.first_name AS customer_firstname,
+    customer.last_name AS customer_lastname,
+    payment.amount,
+    payment.payment_date,
+    staff.first_name AS staff_first_name,
+    staff.last_name AS staff_last_name
+FROM 
+    customer
+JOIN 
+    payment  ON customer.customer_id = payment.customer_id
+JOIN
+    staff ON payment.staff_id = staff.staff_id
+ORDER BY 
+    staff.staff_id ASC;
+SELECT rating,count(film) as count_film FROM film group by rating;
+SELECT title FROM film WHERE rating='G' OR rating='PG-13';
+SELECT title,rental_rate,length FROM film WHERE rating IN('G','PG-13') AND Length <120 and rental_rate <3.00 ORDER BY title;
+SELECT * FROM customer;
+UPDATE customer
+SET first_name= 'Estelle',
+	last_name= 'Manon',
+	email ='test@test.com'
+WHERE customer_id = 1;
+
