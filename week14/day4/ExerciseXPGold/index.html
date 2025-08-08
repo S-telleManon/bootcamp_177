@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // -----------------------Exercise1-----------------------
+        let chooseLanguage = prompt('What language do you speak?').toLowerCase();
+        console.log(chooseLanguage)
+    switch(chooseLanguage){
+        case 'french':
+            alert('Bonjour');
+            break
+         case 'english':
+            alert('Hello');
+            break 
+        case 'hebrew':
+            alert('Shalom');
+            break
+        default:
+            alert('01110011 01101111 01110010 01110010 01111001')
+    }
+        // -----------------------Exercise2-----------------------
+        let gradeResponse = prompt('Please provide your grade')
+        let grade =parseInt(gradeResponse)
+        if(grade>90){
+            console.log('A')
+        }else if(grade>80 && grade<=90){
+            console.log('B')
+        }else if(grade >=70 && grade <=80){
+            console.log('C')  
+        }else{
+            console.log('D')   
+        }
+        // -----------------------Exercise3-----------------------                    
+        let verbString = prompt('Please provide a verb')
+        if (verbString.length>=3 && verbString.indexOf('ing')==-1){
+            console.log(verbString+'ing')
+        }else if(verbString.length>=3 && verbString.indexOf('ing')!==-1){
+            console.log(verbString+'ly')
+        }else{
+            console.log(verbString)
+        }
+            
+    </script>
+</head>
+<body>
+    <h1>Exercise XP GOLD</h1>
+</body>
+</html>
