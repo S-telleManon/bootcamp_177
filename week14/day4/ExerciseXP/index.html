@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // -----------------Exercise1----------------------------
+
+        let x = 5;
+        let y = 2;
+        if(x>y){
+            console.log("x is the biggest number")
+        } else {
+            console.log("x is not the biggest number")
+        }
+    // -----------------Exercise2----------------------------
+        let newDog = "Chihuahua";
+        console.log(newDog.length)
+        console.log(newDog.toLowerCase())
+        console.log(newDog.toUpperCase())
+        if(newDog="Chihuahua"){
+            console.log('I love Chihuahuas, it’s my favorite dog breed')
+        } else{
+            console.log('I dont care, I prefer cats')
+        }
+
+    // -----------------Exercise3----------------------------
+    let z=prompt("Please enter a number")
+    if(z % 2 === 0){
+        console.log(`${z} is an even number`)
+    }else{
+        console.log(`${z} is not an even number`)
+    }
+    // -----------------Exercise4----------------------------  
+    const users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
+    if(users.length === 0){
+        console.log("no one is online")
+    }
+    if(users.length === 1){
+        console.log(`${users[0]} is online`)
+    }
+     if(users.length === 2){
+        console.log(`${users[0]} and ${users[1]}  is online`)
+    }
+    let additionalUsers = users.length - 2;
+    let firstTwoUsers = users[0]+users[1]
+     if(users.length > 2){
+        console.log(`${users[0]} , ${users[1]} and ${additionalUsers} more is online`)
+    }
+    </script>
+</head>
+<body>
+    <h1>Exercise XP</h1>
+</body>
+</html>
