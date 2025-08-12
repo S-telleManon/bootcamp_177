@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // ------------------Exercise 1----------------------------------
+        const people = ["Greg", "Mary", "Devon", "James"];
+        people.shift()
+        people[2] ="Jason"
+        people.push('Estelle')
+        console.log(people)
+        console.log(people.indexOf("Mary"))
+        console.log(people.slice(1,3))
+        console.log(people.indexOf("Foo")) //does not exist in the array
+        let last = people[people.length -1]   
+        console.log(last)
+        for (let i =0;i < people.length;i++){
+            console.log(people[i]);
+        }
+        for (let i =0;i < people.length;i++){
+            console.log(people[i]);
+            if(people[i]='Devon'){
+                break;
+            }
+        }
+    // ------------------Exercise 3----------------------------------        
+     let userNumber=prompt('Please enter a Number')
+     console.log(typeof(userNumber))
+    let number = parseInt(userNumber)
+     while(number<10){
+        number=parseInt(prompt('Please provide another number'));
+     }
+     console.log('Your number '+ number +' is accepted')
+         // ------------------Exercise 2----------------------------------   
+         let favColors = ["blue","turquoise","yellow","green","bluegreen"];
+         let suffix =['st','nd','rd','th','th']
+         for(let i=0;i<favColors.length;i++){
+            console.log("My #"+ (i+1) +" choice is "+ favColors[i])
+         }
+         for(let i=0;i<favColors.length;i++){
+            console.log("My "+ (i+1) + suffix[i]+" choice is "+ favColors[i])
+         }  
+    // ------------------Exercise 4----------------------------------           
+         
+         
+    </script>
+
+    
+</head>
+<body>
+    <h1>ExerciseXP</h1>
+</body>
+</html>
