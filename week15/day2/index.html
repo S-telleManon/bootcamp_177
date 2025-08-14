@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // -------------------Exercise 1----------------------------
+        // function infoAboutMe (){
+        //     console.log("Estelle Manon,29yrs,Swimming")
+        // }
+        // infoAboutMe()
+        // function infoAboutPerson(personName, personAge, personFavoriteColor) {
+        //     console.log("Your name is " + personName+" you are "+personAge+" years old, your favorite color is "+personFavoriteColor)
+        // }
+        // infoAboutPerson("David", 45, "blue")
+        // infoAboutPerson("Josh", 12, "yellow")
+        // // -------------------Exercise 2----------------------------
+
+        // function calculateTip() {
+        // let billAmount = parseFloat(prompt("Please provide the amount of the bill"))
+        // let tip 
+        //     if(billAmount<50){
+        //         tip =0.20*billAmount;
+        //     }else if(billAmount >= 50 && billAmount <= 200){
+        //         tip =0.15*billAmount;
+        //     }else {
+        //         tip = 0.10*billAmount;
+        //     }
+        //     console.log("Tip Amount :"+tip)
+        //     console.log("Final amount:"+billAmount+tip)
+        // }
+
+        // calculateTip()
+        // -------------------Exercise 3----------------------------
+    //     let sum=0
+    //     function isDivisible(){
+    //         for(let i=0;i<500;i++){
+    //            if(i % 23 === 0){
+    //             console.log(i);
+    //             sum += i;
+
+    //            } 
+    //     }
+    //             console.log(sum)
+    // }
+    // isDivisible()
+
+    //     let divisor
+    //     function isDivisible(divisor){
+    //         for(let i=0;i<500;i++){
+    //            if(i % divisor === 0){
+    //             console.log(i);
+    //             sum += i;
+
+    //            } 
+    //     }
+    //             console.log(sum)
+    // }
+    // isDivisible(26)
+        // -------------------Exercise 4----------------------------
+
+// const stock = { 
+//     "banana": 6, 
+//     "apple": 0,
+//     "pear": 12,
+//     "orange": 32,
+//     "blueberry":1
+// }  
+
+// const prices = {    
+//     "banana": 4, 
+//     "apple": 2, 
+//     "pear": 1,
+//     "orange": 1.5,
+//     "blueberry":10
+// } 
+// let shoppingList=['banana','orange','apple']
+// function myBill(){
+//     let total = 0
+//     for(let item of shoppingList){
+//        if(item in stock && stock[item]>0)
+//         total +=prices[item];
+//     }
+//     return total
+// }
+// myBill()
+
+// --------- Exercise 6---------------------
+function hotelCost(){
+    let numOfNight;
+    let priceNight =140;
+    while(true){
+        numOfNight = parseInt(prompt("Please advise the number of Nights you would like to stay"))
+    
+    if(!isNaN(numOfNight) && numOfNight >0 ){
+        break;
+    }else{
+        alert("Please enter a valid number of Nights")
+    }
+
+    return priceNight*numOfNight
+}
+}
+hotelCost()
+</script>     
+
+</head>
+<body>
+    
+</body>
+</html>
