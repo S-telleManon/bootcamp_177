@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // --------------------Exercise1-----------------------
+        console.log(5>= 1) 
+        // Prediction:true
+        // Actual:true
+        console.log(0 === 1) 
+        // Prediction:false
+        // Actual:false
+        console.log(4 <= 1) 
+        // Prediction:false
+        // Actual:false
+        console.log("A" > "B") 
+        // Prediction:
+        // Actual:false
+        console.log("B" < "C") 
+        // Prediction: true
+        // Actual:true
+        console.log("a" > "A") 
+        // Prediction:true
+        // Actual:true
+        console.log("b" < "A") 
+        // Prediction:false
+        // Actual:true
+        console.log(true === false) 
+        // Prediction:
+        // Actual:false
+        console.log(true != true) 
+        // Prediction:false
+        // Actual:false
+    // --------------------Exercise2-----------------------
+    // let userNumber = prompt('Please add some numbers separated by commas');
+    // let numbers=userNumber.split(",");
+    // let num = number(numbers.trim());
+    // let sum = numbers.reduce((total, num) => total + num, 0);
+    //     console.log(sum)
+
+//     // --------------------Exercise3-----------------------
+//    let userSentence = prompt("Please give a sentence with the word Nemo");
+//    let posNemo = userSentence.indexOf("Nemo")
+//    if(posNemo>=0){
+//     console.log("I found Nemo at "+posNemo)
+//    }else{
+//     console.log("I can’t find Nemo")
+//    }
+//     // --------------------Exercise4-----------------------
+ let userNumber = parseInt(prompt("Please give a number"));
+ const character = 'o'
+ let characterRepeat = character.repeat(userNumber)
+ let boomString = ("b"+characterRepeat+"m")
+ let upperCasestring = boomString.toUpperCase()
+ 
+ if(userNumber<2){
+    alert("boom")
+ }else if (userNumber % 2 ===0 && userNumber % 5===0){
+        alert(upperCasestring+"!")
+ }else if (userNumber % 2 ===0){
+    alert("b"+characterRepeat+"m!")
+ }else if (userNumber % 5 ===0){
+    alert(upperCasestring)
+ } else if(userNumber>2 ){
+    alert("b"+characterRepeat+"m")
+ }
+
+    
+    </script>
+</head>
+<body>
+    <h1>ExerciseXpNinja</h1>
+</body>
+</html>
