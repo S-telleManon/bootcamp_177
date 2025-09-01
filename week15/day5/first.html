@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="name">Peter</p>
+        <p id="age">25</p>
+        <p id="location">New York</p>
+        <p id="occupation">Software Engineer</p>
+        <p id="Salary">30000</p>
+    </div>
+</body>
+<script>
+    let name = document.getElementById("name")
+    console.log(name.innerHTML);//provide PETER the information between the tags
+    console.log(name.textContext);//another way to extract peter
+    console.log(name.children[0].textContent);//even if there is a <b> tag in the inner HTML, using this will output only the information Peter
+
+    let loc = querySelector(".location");//location cannot be used,it is a global property
+    console.log(loc.textContent);//NewYork
+
+    let age=document.querySelector("#age").textContent
+    console.log(age)
+    
+    //update the DOM with a new amount 
+    let salary = document.getElementById("Salary");
+    salary.textContent =(parseInt(age)*2000).toString()
+
+    name.style ="color: red"
+
+
+    var products = ["apple",]
+</script>
+</html>

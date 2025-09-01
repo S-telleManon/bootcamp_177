@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <script>
 
         // -------------------Exercise 1----------------------------
@@ -85,29 +86,51 @@
 //     }
 //     return total
 // }
-// myBill()
+// // myBill()
 
-// --------- Exercise 6---------------------
+// // --------- Exercise 6---------------------
 function hotelCost(){
     let numOfNight;
-    let priceNight =140;
+    const priceNight =140;
     while(true){
-        numOfNight = parseInt(prompt("Please advise the number of Nights you would like to stay"))
+        numOfNight = Number(prompt("Please advise the number of Nights you would like to stay"))
     
     if(!isNaN(numOfNight) && numOfNight >0 ){
         break;
     }else{
         alert("Please enter a valid number of Nights")
     }
-
+}
     return priceNight*numOfNight
 }
-}
-hotelCost()
+console.log (hotelCost())
+
+function planeRideCost(){
+    let userDest;
+    while(false)
+    userDest =prompt("Please provide your destination")
+    if(!isNaN(userDest)&& userDest===" "){
+        alert('Please enter a valid destination')
+    }else{
+        userDest = userDest.ToLowerCase()
+    }
+    if(userDest==='london'){
+        return 183;
+    }else if(userDest==="paris"){
+        return  220;
+
+    }else {
+        return 300
+    }
+}  
+console.log(planeRideCost())
+
+
 </script>     
 
 </head>
 <body>
-    
+    <h1>Run hotel cost</h1>
+    <button onclick="hotelCost;">Run calculator</button>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Penguins</h1>
+    <p id=content>The penguins live in very cold enviroments </p>
+</body>
+
+<script>
+    //Dom tree
+    //Select an element - query selector , get eleme b yID 
+    //Modify an element 
+    //create an elemeent and append it to the page 
+    //bind an event listener to an element
+
+
+//Select an element 
+h1 = document.getElementById("title")
+    //console.log(h1.textVontent)
+    console.log(h1.textcontent);
+    para=document.querySelector("#content")
+console.log(para.textcontent)
+
+//get value of attibure
+value=h1.getAttribute('data')
+console.log(value)
+
+//Modify an element
+document.querySelector('#content').innerHTML ="they have pointy tusks"
+
+
+//bind an event listener
+button = document.getElementById('swapButton')
+
+function swapAnimals(){
+    if (h1.textcontent =="Penguins"){
+        h1.textcontent ="Walruses";
+        para.textcontent="They have pointy tusks.";
+    } else{
+        h1.textcontent="Penguins";
+        para.textcontent ="They live in extremly cold environments";
+    }
+}
+button.addEventListener('click',swapAnimals())
+
+</script>
+</html>
