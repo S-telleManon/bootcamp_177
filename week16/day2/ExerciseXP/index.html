@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise XP</title>
+</head>
+<body>
+    <!-- Exercise 1 -->
+   <article>
+    <h1> Some Facts </h1>
+    <h2> The Chocolate </h2>
+    <h3> History of the chocolate </h3>
+    <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+    Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+    <p> After the European discovery of the Americas, chocolate became 
+    very popular in the wider world, and its demand exploded. </p>
+    <p> Chocolate has since become a popular food product that millions enjoy every day, 
+    thanks to its unique, rich, and sweet taste.</p> 
+    <p> But what effect does eating chocolate have on our health?</p> 
+</article>
+
+
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="firstname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lastname"><br><br>
+  <input type="submit" value="Submit" id="submit">
+</form> 
+<ul class="usersAnswer"></ul>
+
+
+    <!-- Exercise 3 -->
+    <p><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the
+<strong>end</strong> you <strong>will</strong> be great Developers!
+<strong>Enjoy</strong> the <strong>JavaScript </strong> lessons</p>
+ 
+
+
+</body>
+<script>
+// 1
+console.log(document.querySelector("h1"))
+//2
+let article = document.querySelector("article")
+let allP = article.querySelectorAll("p")
+let lastP = allP[allP.length-1]
+lastP.remove()
+//3
+let x = document.querySelector("h2")
+x.addEventListener("click",changeColor)
+function changeColor(){
+    if(x.style.color === "red"){
+        x.style.color = "black"
+    }else { 
+        x.setAttribute("style","color:red;")
+    }
+    
+}
+//4
+let y = document.querySelector("h3")
+y.addEventListener("click",displayChange)
+function displayChange(){
+        y.style.display = "none"
+    }
+    
+//5
+let button = document.createElement("button")
+button.textContent = " BOLD "
+document.body.appendChild(button)
+let z = document.querySelectorAll("p")
+function makeBold(){
+    for(let i = 0;i < z.length;i++){
+        z[i].style.fontWeight="bold"
+    }
+}
+
+button.addEventListener("click",makeBold)
+
+
+//Excercise 2:Work with Forms
+console.log(document.querySelector("form"))
+console.log(document.getElementById("fname"))
+console.log(document.getElementById("lname"))
+
+let firstName = document.getElementsByName("firstname")[0];
+let lastName = document.getElementsByName("lastname")[0];
+console.log(firstName)
+console.log(lastName)
+
+//Exercise 3 : Transform the sentence
+
+var allBoldItems
+
+function getBoldItems(){
+    allBoldItems = document.querySelectorAll("strong")
+    allBoldItems = Array.from(allBoldItems)
+    return allBoldItems
+}
+
+
+function highlight(){
+for (let i =0;i<allBoldItems.length;i++){
+    allBoldItems[i].style.color ="blue"
+}
+}
+function returnItemsToDefault(){
+for (let i =0;i<allBoldItems.length;i++){
+    allBoldItems[i].style.color ="black"
+}
+}
+
+getBoldItems()
+
+for (let i =0;i<allBoldItems.length;i++){
+    allBoldItems[i].addEventListener("mouseover",highlight)
+    allBoldItems[i].addEventListener("mouseout",returnItemsToDefault)
+}
+
+
+</script>
+</html>

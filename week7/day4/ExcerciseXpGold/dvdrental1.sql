@@ -53,3 +53,4 @@ SET first_name= 'Estelle',
 	email ='test@test.com'
 WHERE customer_id = 1;
 
+-- Exercise 2

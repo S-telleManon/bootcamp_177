@@ -20,6 +20,8 @@ console.log(abbrevName("Robin Singh"));
 console.log(abbrevName("John Doe"));
 console.log(abbrevName("Madonna"));   
 
+// Exercise 3
+
 function swapCase(phrase){
     let swappedPhrase =""
     for(let i = 0;i < phrase.length;i++){
@@ -33,3 +35,16 @@ function swapCase(phrase){
     return swappedPhrase;
 }
 console.log(swapCase("The Quick Brown Fox")); 
+
+// Exercise 4
+function omnipresent(array,value){
+    for (let sub of array){
+        if(!sub.includes(value)){
+            return false;
+        }
+    }
+    return true;
+}
+console.log(omnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 1));
+console.log(omnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6));
+console.log(omnipresent([[3, 4], [8, 3, 2], [3], [9, 3], [5, 3], [4, 3]], 3));

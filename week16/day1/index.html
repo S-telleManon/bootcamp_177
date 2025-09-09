@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events</title>
+    <script>
+        function hello(){
+            alert("welcome to the class")
+        }
+        function insertRow(){
+            for(let i=0;i<10;i++){
+                let tr =document.createElement("tr")
+                let mynewtd2 = document.createElement("td")
+                let mynewtd1=document.createElement("td")
+                tr.append(mynewtd1) 
+                tr.append(mynewtd2) 
+                mynewtd1.textContent = "Row Cell"+i
+                mynewtd2.textContent = "Column Cell" + i
+                document.getElementById("mytable").append(tr)
+            }
+        }
+        window.onload = function(){
+            // document.getElementById("saturday").onclick = hello
+            document.getElementsById("mybtn").onclick = insertRow
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Welcome to DOM Events Recap </h1>
+    <h2 id= "saturday">This is a saturday class </h2>
+    <table id="mytable"></table>
+    <button id ="mybtn">Add a New Row</button>
+</body>
+</html>
