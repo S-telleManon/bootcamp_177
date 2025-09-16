@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Advanced Functions 
+</body>
+<script>
+    function add() {
+  let counter = 0;
+  function plus() {
+      counter += 1;
+      console.log(counter) ;
+  }
+  plus();  
+}
+add()
+
+function outside(x) {
+  function inside(y) {
+    return x + y;
+  }
+  return inside;
+}
+outside(2)
+
+</script>
+</html>
