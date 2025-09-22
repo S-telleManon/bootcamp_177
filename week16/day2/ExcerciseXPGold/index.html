@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise XP Gold </title>
+<script src="excercise.js" defer></script>
+</head>
+<body>
+<!-- Exercise 1 : Select a kind of Music -->
+ <h2>Exercise 1 : Select a kind of Music</h2>
+    <h2>Select a genre from the list</h2>
+    <select id="genres">
+        <option value="rock">Rock</option>
+        <option value="blues" selected>Blues</option>
+    </select>
+    <P id="selection"></P>
+
+    <!-- Exercise 2: Delete colors -->
+
+<h2>Exercise 2: Delete colors</h2>
+
+<form>
+    <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+    </select>
+    <input type="button" value="Select and Remove" id="removeBtn">
+</form>
+
+
+<!-- Exercise 3 : Create a shopping list -->
+
+<h2>Exercise 3 : Create a shopping list</h2>
+
+<div id="root"></div>
+
+
+</body>
+<script>
+
+//Excercise 1
+const select = document.getElementById("genres");
+
+let newGenre = document.createElement("option");
+newGenre.value = "classic";
+newGenre.textContent = "Classic";
+newGenre.selected = true;
+
+select.appendChild(newGenre)
+
+document.getElementById("selection").textContent = "Selection: " +select.value
+    select.addEventListener("change", () => {
+      document.getElementById("selection").textContent =
+        "Selection : " + select.value;
+    });
+
+//Excercise 2
+
+document.getElementById("removeBtn").addEventListener("click",removecolor)
+
+function removecolor(){
+    const select = document.getElementById("colorSelect");
+    if(select.options.length > 0) {
+        select.remove(select.selectedIndex)
+    }
+}
+
+</script>
+</html>
