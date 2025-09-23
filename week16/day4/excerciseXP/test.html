@@ -1,0 +1,48 @@
+let newX = 0, newY = 0, startX = 0 , startY = 0;
+
+const box = document.getElementById("box");
+const target = document.getElementById("target");
+
+box.addEventListener('mousedown', mouseDown);
+
+function mouseDown(e) {
+  startX = e.clientX;
+  startY = e.clientY;
+
+  document.addEventListener('mousemove', mouseMove);
+  document.addEventListener('mouseup', mouseUp);
+}
+
+function mouseMove(e) {
+  newX = startX - e.clientX;
+  newY = startY - e.clientY;
+
+  startX = e.clientX;
+  startY = e.clientY;
+
+  box.style.top = (box.offsetTop - newY) + "px";
+  box.style.left = (box.offsetLeft - newX) + "px";
+}
+
+function mouseUp(e) {
+  document.removeEventListener('mousemove', mouseMove);
+  document.removeEventListener('mouseup', mouseUp);
+
+  // Check if box is inside target
+  const boxRect = box.getBoundingClientRect();
+  const targetRect = target.getBoundingClientRect();
+
+  if (
+    boxRect.left < targetRect.right &&
+    boxRect.right > targetRect.left &&
+    boxRect.top < targetRect.bottom &&
+    boxRect.bottom > targetRect.top
+  ) {
+    // Snap box to center of target
+    box.style.top = (target.offsetTop + target.offsetHeight/2 - box.offsetHeight/2) + "px";
+    box.style.left = (target.offsetLeft + target.offsetWidth/2 - box.offsetWidth/2) + "px";
+    console.log("Dropped inside target!");
+  } else {
+    console.log("Dropped outside target.");
+  }
+}
