@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercise 5 : Juice Bar</h1>
+    <div id ="order"></div>
+</body>
+
+<script>
+// function makeJuice(size){
+//     const ingredients =[]
+//     function addIngredients(ingr1,ingr2,ingr3){
+//         const sentence = `The client wants a ${size} juice, containing ${ingr1}, ${ingr2}, and ${ingr3}.`;
+//         return sentence
+//     }
+//    return addIngredients("banana","watermelon","pineapple")
+
+// }
+// makeJuice("small")
+// console.log(makeJuice("small"))
+
+
+function makeJuice(size){
+    const ingredients =[]
+    function addIngredients(ingr1,ingr2,ingr3){
+        ingredients.push(ingr1,ingr2,ingr3)
+    }
+
+
+    function displayJuice(){
+        const sentence = `The client wants a ${size} juice, containing ${ingredients.join(", ")}.`;
+        document.getElementById("order").textContent = sentence;  
+        return sentence
+    }
+
+        addIngredients("peach", "watermelon", "pineapple");
+      addIngredients("apple", "mango", "mandarine")
+      displayJuice()
+
+}
+makeJuice("large")
+
+
+</script>
+</html>
