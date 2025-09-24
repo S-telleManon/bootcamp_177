@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        #para {
+          width: 300px;
+          height: 200px;
+          position: absolute;
+            cursor: grab;
+            text-align: center;
+
+        }
+        </style>
+</head>
+<body>
+    <h1>Exercise 2 : Animation with a paragraph</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum deserunt repudiandae placeat deleniti, iure quos incidunt harum dolore dolores odio ab sint, iste debitis? Voluptatem placeat maiores at cum necessitatibus.</p>
+</body>
+<script>
+let initialLeft = 0, initialTop = 0; startX = 0 , startY = 0
+
+const paragraph = document.getElementById("para");
+paragraph.addEventListener('mousedown',mouseDown);
+
+function mouseDown(e){
+  startX = e.clientX;
+  startY = e.clientY;
+    initialLeft = paragraph.offsetLeft;
+    initialTop = paragraph.offsetTop;
+  
+  document.addEventListener('mousemove',mouseMove)
+  document.addEventListener('mouseup',mouseUp)
+}
+
+function mouseMove(e){
+  const dx =  e.clientX - startX 
+  const dy = e.clientY - startY
+
+      const newLeft = initialLeft + dx;
+      const newTop = initialTop + dy;
+
+      paragraph.style.left = newLeft + "px";
+      paragraph.style.top = newTop + "px";
+
+
+      let fontSize = Math.max(12, (newLeft + newTop) / 20); 
+      paragraph.style.fontSize = fontSize + "px";
+}
+
+function mouseUp(e) {
+  document.removeEventListener('mousemove', mouseMove);
+  document.removeEventListener('mouseup', mouseUp);
+}
+
+
+</script>
+</html>

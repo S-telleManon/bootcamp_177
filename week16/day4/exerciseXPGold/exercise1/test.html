@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag & Drop Letters</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      user-select: none;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 800px;   /* adjust row width */
+    }
+
+    .letter-box {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      background: lightblue;
+      border: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: grab;
+      position: absolute; /* important: so we can move by x,y */
+    }
+
+    .dragging {
+      opacity: 0.6;
+      cursor: grabbing;
+    }
+  </style>
+</head>
+<body>
+  <h2>Drag & Drop Letters (A–Z)</h2>
+  <div id="playground"></div>
+
+  <script>
+    const playground = document.getElementById("playground");
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+    // initial grid positions
+    const startX = 20, startY = 80;
+    const boxSize = 60; // includes margin
+
+    letters.forEach((letter, index) => {
+      const div = document.createElement("div");
+      div.className = "letter-box";
+      div.textContent = letter;
+
+      // place in grid initially
+      const row = Math.floor(index / 10);
+      const col = index % 10;
+
+      div.style.left = (startX + col * boxSize) + "px";
+      div.style.top = (startY + row * boxSize) + "px";
+
+      playground.appendChild(div);
+    });
+
+    let currentBox = null;
+    let offsetX = 0, offsetY = 0;
+
+    document.addEventListener("mousedown", (e) => {
+      if (e.target.classList.contains("letter-box")) {
+        currentBox = e.target;
+        currentBox.classList.add("dragging");
+
+        // calculate offset inside the box
+        const rect = currentBox.getBoundingClientRect();
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+
+        document.addEventListener("mousemove", mouseMove);
+        document.addEventListener("mouseup", mouseUp);
+      }
+    });
+
+    function mouseMove(e) {
+      if (!currentBox) return;
+
+      // update x,y coords
+      const x = e.clientX - offsetX;
+      const y = e.clientY - offsetY;
+
+      currentBox.style.left = x + "px";
+      currentBox.style.top = y + "px";
+    }
+
+    function mouseUp(e) {
+      if (currentBox) {
+        currentBox.classList.remove("dragging");
+        currentBox = null;
+      }
+
+      document.removeEventListener("mousemove", mouseMove);
+      document.removeEventListener("mouseup", mouseUp);
+    }
+  </script>
+</body>
+</html>
