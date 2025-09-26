@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise XP</title>
+</head>
+<body>
+    <!-- Exercise 1 : HTML Form -->
+    <!-- <form action="" method="GET">
+        <label for="username">Name:</label><br>
+        <input type="text" id="username" name="username" value="JohnDoe"><br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="user_comments" rows="5" cols="50"></textarea><br>
+    <input type="submit" value="Send">
+    </form> -->
+
+<!-- No 3.data will appear in the URL -->
+    <!-- Exercise 2 : HTML Form 2-->
+    <form action="" method="POST">
+        <label for="username">Name:</label><br>
+        <input type="text" id="username" name="username" value="JohnDoe"><br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="user_comments" rows="5" cols="50"></textarea><br>
+    <input type="submit" value="Send">
+    </form>
+
+
+
+</body>
+
+<script>
+const marioGame = {
+  detail : "An amazing game!",
+  characters : {
+      mario : {
+        description:"Small and jumpy. Likes princesses.",
+        height: 10,
+        weight: 3,
+        speed: 12,
+      },
+      bowser : {
+        description: "Big and green, Hates princesses.",
+        height: 16,
+        weight: 6,
+        speed: 4,
+      },
+      princessPeach : {
+        description: "Beautiful princess.",
+        height: 12,
+        weight: 2,
+        speed: 2,
+      }
+  },
+}
+let jsonString = JSON.stringify(marioGame)
+console.log(jsonString)
+
+let prettyJson = JSON.stringify(marioGame,null,2)
+console.log(prettyJson)
+
+</script>
+</html>
