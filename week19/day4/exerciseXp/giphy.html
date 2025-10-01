@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Exercise 1 : Giphy API -->
+    <ul id="gif_list">
+        <li>Loading....</li>
+    </ul>
+    <h1> 10 gifs about the “sun”</h1>
+    <div id = "gif-container"></div>
+</body>
+<script>
+    let gif;
+    let mypromise = fetch("https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
+    
+    mypromise.then(function(data)
+    { 
+        // data.json() returns a promise
+        return data.json()
+    }).then(function(data){
+        console.log(data)
+
+        let li_string = ""
+        gif = data.data
+        for(let i = 0;i < gif.length;i++){
+            let singlegif = gif[i]
+            let imgLink = singlegif.images.fixed_height.url
+            console.log(singlegif)
+            li_string += `<li><img src="${imgLink}"></li>`;
+        }
+
+            document.getElementById("gif_list").innerHTML = li_string
+    });
+    mypromise.catch(function(data) {
+            console.log(data)
+            document.getElementById("gif").innerHTML = "<h2 style='background-color: red;'>The link is not good</h2>"
+       })
+// Part 2
+const apiKey = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
+const query = "sun";
+const limit = 10;           
+const offset = 2;            
+
+const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}&limit=${limit}&offset=${offset}`;
+
+fetch(url)
+      .then(response => response.ok ? response.json() : Promise.reject(`HTTP error! Status: ${response.status}`))
+      .then(data => {
+        const container = document.getElementById("gif-container");
+
+        data.data.forEach(gif => {
+          const img = document.createElement("img");
+          img.src = gif.images.fixed_height.url; // You can choose other sizes if needed
+          img.alt = gif.title || "GIF";
+          container.appendChild(img);
+        });
+      })
+      .catch(error => console.error("An error occurred:", error));
+</script>
+</html>
