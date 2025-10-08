@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="robots.css">
+</head>
+<style>
+
+    body {
+      background-image: url('./circuit-pattern.png');
+      padding: 20px;
+      text-align: center;
+      background-color: blue;
+    }
+    input {
+      margin-bottom: 20px;
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .robot {
+    width: 375px;
+    height: 450px;
+    background-image: url('./card-pattern.png');
+    background-color: aqua;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    }
+    /* .robot img {
+      width: 100%;
+      border-radius: 10px;
+    } */
+     h3{
+        font-size: x-large;
+     }
+     h1{
+        font-size: xx-large;
+     }
+</style>
+<script>
+ const robots = [
+          {
+            id: 1,
+            name: 'Leanne Graham',
+            username: 'Bret',
+            email: 'Sincere@april.biz',
+            image: 'https://robohash.org/1?200x200'
+          },
+          {
+            id: 2,
+            name: 'Ervin Howell',
+            username: 'Antonette',
+            email: 'Shanna@melissa.tv',
+            image: 'https://robohash.org/2?200x200'
+          },
+          {
+            id: 3,
+            name: 'Clementine Bauch',
+            username: 'Samantha',
+            email: 'Nathan@yesenia.net',
+            image: 'https://robohash.org/3?200x200'
+          },
+          {
+            id: 4,
+            name: 'Patricia Lebsack',
+            username: 'Karianne',
+            email: 'Julianne.OConner@kory.org',
+            image: 'https://robohash.org/4?200x200'
+          },
+          {
+            id: 5,
+            name: 'Chelsey Dietrich',
+            username: 'Kamren',
+            email: 'Lucio_Hettinger@annie.ca',
+            image: 'https://robohash.org/5?200x200'
+          },
+          {
+            id: 6,
+            name: 'Mrs. Dennis Schulist',
+            username: 'Leopoldo_Corkery',
+            email: 'Karley_Dach@jasper.info',
+            image: 'https://robohash.org/6?200x200'
+          },
+          {
+            id: 7,
+            name: 'Kurtis Weissnat',
+            username: 'Elwyn.Skiles',
+            email: 'Telly.Hoeger@billy.biz',
+            image: 'https://robohash.org/7?200x200'
+          },
+          {
+            id: 8,
+            name: 'Nicholas Runolfsdottir V',
+            username: 'Maxime_Nienow',
+            email: 'Sherwood@rosamond.me',
+            image: 'https://robohash.org/8?200x200'
+          },
+          {
+            id: 9,
+            name: 'Glenna Reichert',
+            username: 'Delphine',
+            email: 'Chaim_McDermott@dana.io',
+            image:'https://robohash.org/9?200x200'
+          },
+          {
+            id: 10,
+            name: 'Clementina DuBuque',
+            username: 'Moriah.Stanton',
+            email: 'Rey.Padberg@karina.biz',
+            image:'https://robohash.org/10?200x200'
+          }
+          ];
+
+
+
+function generateRobot(robot_information) {
+    let newrobot = document.createElement("div");
+    newrobot.setAttribute('class', "robot");
+
+    let img = document.createElement("img");
+    img.src = robot_information.image;
+
+    let h1 = document.createElement("h1");
+    let h3 = document.createElement("h3");
+    
+    h1.innerHTML = robot_information.name;
+    h3.innerHTML = robot_information.email;
+
+
+    newrobot.appendChild(img);
+    newrobot.appendChild(h1);
+    newrobot.appendChild(h3);
+
+    return newrobot;
+}
+
+window.onload = function() {
+    let myfilterelem = document.getElementById('myfilter');
+    let robot_container = document.getElementById("robot_container");
+
+    function displayRobot(robot) {
+    const newRobot = generateRobot(robot);
+    robot_container.appendChild(newRobot);
+    }
+
+    robots.forEach(displayRobot);
+
+    myfilterelem.addEventListener("input", function(event) {
+        let myfilter = event.target.value.toLowerCase();
+        robot_container.innerHTML = ""; 
+        for (let i = 0; i < robots.length; i++) {
+            if (robots[i].name.toLowerCase().includes(myfilter)) {
+                let newrobot = generateRobot(robots[i]);
+                robot_container.appendChild(newrobot);
+            }
+        }
+    });    
+}
+</script>
+<body>
+  <input type="text" id="myfilter" placeholder="Search robot by name..." />
+  <div id="robot_container"></div>
+
+</body>
+
+</html>
