@@ -1,28 +1,10 @@
-const express = require('express') // found in node_modules/express
+const express = require('express')
 const app = express()
-app.use(express.json()); // parse json body content
+app.use(express.json())
 const fs = require('fs');
 const path = require('path');
 
-const tasks = [
-    {
-        "id" : 1,
-        "taskName" : "Cleaning the house",
-
-    },
-    {
-        "id" : 2,
-        "taskName" : "Do homework",
-    },
-    {
-        "id" : 3,
-        "taskName" : "Cook food",
-    },
-    {
-        "id" : 4,
-        "taskName" : "Iron clothes",
-    } 
-]
+const tasks = []
 
 // app.get("/api/tasks", function(request,response){
 //      response.json(tasks)

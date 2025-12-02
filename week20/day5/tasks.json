@@ -22,5 +22,9 @@
   {
     "id": 6,
     "taskName": "Cleaning Car"
+  },
+  {
+    "id": 7,
+    "taskName": "cleaning the garage"
   }
 ]
