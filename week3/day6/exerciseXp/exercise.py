@@ -85,7 +85,7 @@ index_to_user = {index: user for index, user in enumerate(users)}
 
 print(index_to_user)
 
-sorted_users = sorted(users)  # Alphabetical sort
+sorted_users = sorted(users) 
 sorted_dict = {user: index for index, user in enumerate(sorted_users)}
 
 print(sorted_dict)
